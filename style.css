@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: rgb(88, 88, 88);
+    font-size: 2rem;
+    color: #fff;
+}
+
+.photo {
+    width: 250px;
+}
+
+.stozek-con,
+.walec-con,
+.kula-con {
+    display: none;
+}
+
+.show {
+    display: block;
+}

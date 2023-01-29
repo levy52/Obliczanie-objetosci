@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 2 - JS - Radosław Lewicki</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container text-light">
+        <h1 class="text-center">BRYŁY OBROTOWE</h1>
+        <p class="fs-4 text-center">Bryła obrotowa - bryła geometryczna ograniczona powierzchnią powstałą z obrotu
+            figury
+            płaskiej do okoła prostej (osi obrotu).</p>
+        <hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3 d-flex flex-column">
+                <p class="text-light text-center">Wybierz figurę:</p>
+                <button id="stozek" type="button" class="btn btn-light fs-4">STOŻEK</button>
+                <button id="walec" type="button" class="btn btn-light fs-4 mt-3">WALEC</button>
+                <button id="kula" type="button" class="btn btn-light fs-4 mt-3">KULA</button>
+            </div>
+            <div class="col-9">
+                <div class="stozek-con">
+                    <p class="text-center">Stożek</p>
+                    <p class="text-center">V=1/3πr<sup>2</sup>*H</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <form class="d-flex flex-column align-items-center">
+                                <label for="stozek-lenght-r">Podaj długość promienia:</label>
+                                <input type="text" id="stozek-lenght-r" name="stozek-lenght-r">
+                                <label for="stozek-height">Podaj wysokość:</label>
+                                <input type="text" id="stozek-height" name="stozek-height">
+                                <input class="mt-2" type="button" value="Oblicz" id="btn-calc-stozek">
+                            </form>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end"><img class="photo" src="./stozek.png"></div>
+                    </div>
+                    <div id="score-stozek"></div>
+                </div>
+
+                <div class="walec-con">
+                    <p class="text-center">Walec</p>
+                    <p class="text-center">V=πr<sup>2</sup>*H</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <form class="d-flex flex-column align-items-center">
+                                <label for="walec-lenght-r">Podaj długość promienia:</label>
+                                <input type="text" id="walec-lenght-r" name="walec-lenght-r">
+                                <label for="walec-height">Podaj wysokość:</label>
+                                <input type="text" id="walec-height" name="walec-height">
+                                <input class="mt-2" type="button" value="Oblicz" id="btn-calc-walec">
+                            </form>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end"><img class="photo" src="./walec.png"></div>
+                    </div>
+                    <div id="score-walec"></div>
+                </div>
+
+                <div class="kula-con">
+                    <p class="text-center">Kula</p>
+                    <p class="text-center">V=4/3πr<sup>3</sup></p>
+                    <div class="row">
+                        <div class="col-6">
+                            <form class="d-flex flex-column align-items-center">
+                                <label for="kula-lenght-r">Podaj długość promienia:</label>
+                                <input type="text" id="kula-lenght-r" name="kula-lenght-r">
+                                <input class="mt-2" type="button" value="Oblicz" id="btn-calc-kula">
+                            </form>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end"><img class="photo" src="./kula.png"></div>
+                    </div>
+                    <div id="score-kula"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
